@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+    html,
+    body {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 19%, rgba(148,187,233,1) 81%);
+    }
+
+    :root {
+        --width-: 400px;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        height: 90vh;
+        align-items: center;
+    }
+
+    .container {
+        background: rgb(106, 118, 220);
+        background: linear-gradient(0deg, rgba(106, 118, 220, 1) 0%, rgba(107, 119, 220, 1) 12%, rgba(223, 208, 175, 1) 100%);
+        height: 500px;
+        width: var(--width-);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        overflow: hidden;
+        animation: cont 1s 1 ease;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        transition: all ease 1s ;
+    }
+
+
+
+
+    @keyframes cont{
+
+0%{
+filter: blur(10px);
+transform: scale(.9);
+}
+
+100%{
+
+}
+
+    }
+
+    h2 {
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .input1 {
+
+        height: 34px;
+        width: 300px;
+        outline: none;
+        border-radius: 2px;
+        border: none;
+        caret-color: red;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        background-color: #fcf8f1;
+        font-size: 18px;
+    
+    }
+
+    .btn {
+        height: 34px;
+        background-color: rgb(85, 85, 219);
+        color: white;
+        border: none;
+        border-radius: 2px;
+        
+        transition: all ease .5s;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .btn:hover {
+        background-color: rgb(112, 112, 234);
+
+    }
+
+    .btn:active {
+        background-color: rgb(63, 63, 240);
+    }
+
+    .list-container {
+        /* border: 1px solid black; */
+        width: var(--width-);
+        height: 400px;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+font-size: 12px;
+overflow-x: hidden;
+
+    }
+
+    .list-container::-webkit-scrollbar{
+        display: none;
+    }
+   
+    .list {
+        background-color: rgba(240, 255, 255, 0.096);
+        /* border: 1px solid black; */
+        margin: 10px 20px;
+        border-radius: 10px;
+        height: 38px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 0px 0px 15px;
+        align-items: center;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        overflow: hidden;
+        filter: blur(0);
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
+        
+        }
+
+
+        
+    .task-list>ul>li {
+        list-style: none;
+        
+    }
+
+    
+
+    .task {
+        color: black;
+        font-size: 18px;
+      
+    }
+
+    .cross {
+        background-color: rgb(245, 105, 105);
+        padding: 15px 30px 12px 0px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+transition: all ease .5s;
+    }
+
+    .cross:hover  {
+
+        padding: 15px  40px 12px 5px;
+
+            }
+
+
+    .cross::before{
+        content: "\00d7";
+        padding-left: 40%;
+        font-size: 20px;
+    }  
+ 
+</style>
+
+<body>
+
+    <div class="main">
+
+        <div class="container">
+
+            <div class="heading">
+                <h2>To-Do</h2>
+            </div>
+
+            <div class="input">
+                <input type="text" class="input1" id="input1">
+                <Button onclick="" class="btn" id="btn">
+                    add list
+                </Button>
+                <div>
+                    <p id="notice"> </p>
+                </div>
+            </div>
+
+            <div class="list-container" id="notes" >
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+
+</html>
